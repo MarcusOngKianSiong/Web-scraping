@@ -1,0 +1,144 @@
+1. Extract and organize the key information I am going to use
+
+Key note when extracting data from the web:
+    - What you will be doing
+        - You will be looking to extract data that are enclosed in tags: <a href='....'>DATA</a>
+        - Identifying the data require you to identify the tags or an identifier attribute that uniquely identify elements in a page
+        - Manual research of the html code is necessary through the browser developer tools
+    - Environmental considerations
+        - Major sites have software systems that helps recognize traffic that they suspect is a script and they may refuse to serve you after ahwile, thereby breaking any scripts
+            - Selenium module is more likely to function on these sites longer than requests as it simulates human interaction
+                - Selenium user-agent is the same as a regular browser
+                - Selenium has the same traffic patterns
+            - Some companies have created systems to specifically block browsers controlled by selenium to prevent web scraping
+
+        - Ways of telling if you are using a script:
+            - user-agent string     # included in all HTTP requests
+            - Traffic pattern
+
+
+
+Key libraries:
+    - webbrowser    -> Opens browsers to a specific page
+        - open([Website link])      # Open up a website on a browser
+        - 
+    - requests      -> Download files and web pages from the internet
+        - get([url])                     # Takes a url, download it, and return a response object. From the response object, you can do a few things:
+            - status_code           # If the request is successful
+            - raise_for_status()    # Raise an exception if the request was unsuccessful
+            - text                  # Return the html code of a webpage in the form of a string
+            - iter_content([number of bytes for each chunk])      # Use to iterate over the contents of a response, also used to chunk the data rather than loading all into memory at once to prevent the computer from running out of memory.
+            - 
+    
+
+    - bs4           -> Extracting information from a HTML page by parsing it
+            - beautifulsoup([text to analyze], 'html.parser')       # Returns an object that allows you to manipulate the various types of items in the html
+                - select([CSS selector])                            # Returns a list of all the elements (IN THE FORM OF A TAG OBJECT) that contain the specifications given in the argument
+                    - [0]                                           # Return the entire html tag: <p id='something'>isudahasgbarg</p>
+                    - [0].getText()                                 # Return the contents found between opening and closing tags
+                    - [0].attrs                                     # Return a dictionary of the details found within the opening tag: {'id':'author'}
+                    - [0].get([attribute name e.g. id])             # Return the value that the attribute holds
+
+    - selenium      -> Launches and controls a web browser (fill in forms and simulates mouse clicks)
+        - LOOK AT SECTION 3 ON HOW TO IMPORT THIS LIBRARY
+        - webdriver.Firefox()           # returns an object of type webdriver and open the browser firefox, OTHER REQUIREMENTS NEEDS TO BE FULFILLED TO USE THIS CHECK SECTION 3
+            - get([website link])       # Go to a specific website on the browser
+            
+            - find_element_*            # Returns the first encountered element as a webelement object
+                - find_element_by_class_name()
+                - find_element_by_css_selector()
+                - find_element_by_id()
+                - find_element_by_link_text()
+                - find_element_by_partial_link_test()
+                - find_element_by_name()
+                - find_element_by_tag_name()
+            - find_elements_*           # Returns a list webelement_* object where each item represents every matching element on the page
+                - find_elements_by_class_name()
+                - find_elements_by_css_selector()
+                - find_elements_by_id()
+                - find_elements_by_link_text()
+                - find_elements_by_partial_link_test()
+                - find_elements_by_name()
+                - find_elements_by_tag_name()
+            
+                    - Webelement objects    # WHAT YOU CAN DO WITH THE RETURN VALUE OF FIND_ELEMENT/S
+                        - tag_name
+                        - get_attribute()
+                        - text
+                        - clear()
+                        - is_displayed()
+                        - is_enabled()
+                        - is_selected()
+                        - location
+                        - click()
+                        - send_keys()
+                        - submit()
+
+        - CHECK SECTION THREE FOR SPECIAL KEYS
+        - browser
+                - back()
+                - forward()
+                - refresh()
+                - quit()
+
+    - sys           -> Functions and variables that is used to manipulate python runtime environment (The environment in which your code is running in)
+        - sys.argv      # Variable, stores a list of program's filename and command line arguments (python something.py 1 2 3, sys.argv: ['something.py', '1', '2', '3', '4'])
+
+    - os
+        - makedirs()            # Make a directory
+        - path                  # Manipulate pathnames
+            - basename()        # Returns the base name of a path: https://imgs.xkcd.com/comics/heartbleed_explanation.png -> Returns heartbleed_explanation.png
+            - join()            # Returns a string that joins the arguments such that it reflects a path
+
+    - pyperclip     -> copy and paste clipboard Functions
+        - paste()       # return content from the clipboard
+        - 
+
+Key technical facts, considerations, or operations that will be useful:
+    - with open('[file location]','[type of operation e.g. wb, a, ab]') as variable_name_to_access_file:       # Open a file and edits can be made within, at the end of the operation, the file closes automatically.
+        .......
+        - Operation types:
+            - 'a'
+            - 'w'
+            - 'r'
+            - 'x'
+        - file handling:        -> Specify how the data in the file should be handled 
+            - 't'               -> Handle file in text mode ()
+            - 'b'               -> Handle file in binary mode (use this to maintain the exact character used or stored, maintain unicode encoding)
+            
+    - from selenium import webdriver        # This is how you import selenium
+
+    - To use the webdriver.firefox()
+            1. Download the webdriver executable file for the associated browser
+            2. Set the webdriver executable file in PATH
+            3. Restart the PC
+            4. Continue on with the coding
+
+    - find_element_*/find_elements_* characteristics:
+        - Case sensitive
+        - Return a NoSuchElement exception when nothing is found (Use try and except to handle this)
+        - 
+
+    - Interacting with textfields 
+            - Find <input> or <textarea> element
+            - Call send_keys() method
+    
+    - To press special keys
+            - add this: from selenium.webdriver.common.keys import Keys
+            - Use the various special keys:
+                Keys.:
+                    - DOWN
+                    - UP
+                    - LEFT
+                    - RIGHT
+                    - ENTER
+                    - RETURN
+                    - HOME
+                    - END
+                    - PAGE_DOWN
+                    - PAGE_UP
+                    - ESCAPE
+                    - BACK_SPACE
+                    - DELETE
+                    - F1 to F12
+                    - TAB
