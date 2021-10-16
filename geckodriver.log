@@ -1,0 +1,168 @@
+1634328563844	geckodriver	INFO	Listening on 127.0.0.1:49610
+1634328566952	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49611" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofilegCXUg7"
+1634328567332	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofilegCXUg7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49611/devtools/browser/84d62f1a-4125-4c4b-96a8-991140b39d22
+1634328569250	Marionette	INFO	Listening on port 49617
+1634328569704	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1634328616939	Marionette	INFO	Stopped listening on port 49617
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1634328620240	geckodriver	INFO	Listening on 127.0.0.1:49692
+1634328623339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49693" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileyRShO6"
+1634328623641	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileyRShO6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49693/devtools/browser/5ccabcc2-4897-4e60-a756-72197106ab47
+1634328625564	Marionette	INFO	Listening on port 49699
+1634328626052	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1634329014627	Marionette	INFO	Stopped listening on port 49699
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.log: "RemoteSettingsWorker error: AbortError: IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort."
+console.error: services.settings: 
+  Message: TypeError: NetworkError: Network request failed
+  Stack:
+    fetch/</request.onerror@resource://services-settings/Utils.jsm:117:16
+observe@resource://gre/modules/AsyncShutdown.jsm:575:16
+
+console.warn: services.settings: security-state/cert-revocations sync interrupted by shutdown
+1634329020238	geckodriver	INFO	Listening on 127.0.0.1:52817
+1634329023326	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52818" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofilexIdqg2"
+1634329023632	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofilexIdqg2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52818/devtools/browser/5a8ecfd4-7b89-4fb3-a326-69c141c3caeb
+1634329025599	Marionette	INFO	Listening on port 52825
+1634329026032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1634329976691	Marionette	INFO	Stopped listening on port 52825
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+9443903	Marionette	INFO	Listening on port 52995
+1634329444344	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1634329975003	Marionette	INFO	Stopped listening on port 52995
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+browser/cc9c8556-95c9-4ad6-acbb-145295c048ff
+1634329908963	Marionette	INFO	Listening on port 53160
+1634329909431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+1634329971754	Marionette	INFO	Stopped listening on port 53160
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1634329989681	geckodriver	INFO	Listening on 127.0.0.1:53239
+1634329992779	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53240" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileJkrhqe"
+1634329993068	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileJkrhqe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53240/devtools/browser/454c282a-cea0-4192-95f2-1f177ec521d3
+1634329994926	Marionette	INFO	Listening on port 53245
+1634329994962	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+1634330002396	Marionette	INFO	Stopped listening on port 53245
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1634330352860	geckodriver	INFO	Listening on 127.0.0.1:53431
+1634330355952	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53432" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileL7GlmC"
+1634330356254	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileL7GlmC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53432/devtools/browser/41106ada-5896-417f-83cf-4bad1fecf7bd
+1634330357994	Marionette	INFO	Listening on port 53437
+1634330358061	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+1634330372330	Marionette	INFO	Stopped listening on port 53437
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1634330393915	geckodriver	INFO	Listening on 127.0.0.1:53487
+1634330397032	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53488" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileGkJbmq"
+1634330397353	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileGkJbmq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53488/devtools/browser/b8e0a2cd-841b-4095-a118-f468870ef038
+1634330399222	Marionette	INFO	Listening on port 53494
+1634330399736	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+JavaScript warning: https://inventwithpython.us5.list-manage.com/EwRnrs/SMG/gfo/U1FpCg/7LwOw4hr/cCYfZCEC/Ci8q/CmAcVwwC, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1634330440874	Marionette	INFO	Stopped listening on port 53494
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1634330442776	geckodriver	INFO	Listening on 127.0.0.1:53561
+1634330445883	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53562" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileyUqIvK"
+1634330446175	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileyUqIvK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53562/devtools/browser/722d9dd2-fba5-4122-8113-0e73ab83e93c
+1634330448035	Marionette	INFO	Listening on port 53567
+1634330448077	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+1634330494695	Marionette	INFO	Stopped listening on port 53567
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1634330497144	geckodriver	INFO	Listening on 127.0.0.1:53623
+1634330500261	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53624" "-no-remote" "-profile" "C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileWZWACg"
+1634330500573	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\siong\\AppData\\Local\\Temp\\rust_mozprofileWZWACg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53624/devtools/browser/ab9dd1fd-7bee-4658-9448-1bfe472125a7
+1634330502473	Marionette	INFO	Listening on port 53630
+1634330503001	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1634331381100	Marionette	INFO	Stopped listening on port 53630
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+vTools listening on ws://localhost:53686/devtools/browser/e5e8c495-ea46-4296-8928-9be12293fcf3
+1634330551547	Marionette	INFO	Listening on port 53693
+1634330551599	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+JavaScript warning: https://inventwithpython.us5.list-manage.com/EwRnrs/SMG/gfo/U1FpCg/7LwOw4hr/cCYfZCEC/Ci8q/CmAcVwwC, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1634331378039	Marionette	INFO	Stopped listening on port 53693
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+0685801	Marionette	INFO	Listening on port 53816
+1634330686171	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+JavaScript warning: https://inventwithpython.us5.list-manage.com/EwRnrs/SMG/gfo/U1FpCg/7LwOw4hr/cCYfZCEC/Ci8q/CmAcVwwC, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-5P4V6Z, line 363: unreachable code after return statement
+1634331384182	Marionette	INFO	Stopped listening on port 53816
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

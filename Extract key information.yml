@@ -23,13 +23,12 @@ Key libraries:
         - open([Website link])      # Open up a website on a browser
         - 
     - requests      -> Download files and web pages from the internet
-        - get([url])                     # Takes a url, download it, and return a response object. From the response object, you can do a few things:
-            - status_code           # If the request is successful
-            - raise_for_status()    # Raise an exception if the request was unsuccessful
-            - text                  # Return the html code of a webpage in the form of a string
-            - iter_content([number of bytes for each chunk])      # Use to iterate over the contents of a response, also used to chunk the data rather than loading all into memory at once to prevent the computer from running out of memory.
+        - get([url])                                                # Takes a FULL url, download it, and return a response object. From the response object, you can do a few things:
+            - status_code                                           # If the request is successful
+            - raise_for_status()                                    # Raise an exception if the request was unsuccessful
+            - text                                                  # Return the html code of a webpage in the form of a string
+            - iter_content([number of bytes for each chunk])        # Use to iterate over the contents of a response, also used to chunk the data rather than loading all into memory at once to prevent the computer from running out of memory.
             - 
-    
 
     - bs4           -> Extracting information from a HTML page by parsing it
             - beautifulsoup([text to analyze], 'html.parser')       # Returns an object that allows you to manipulate the various types of items in the html
@@ -75,7 +74,7 @@ Key libraries:
                         - submit()
 
         - CHECK SECTION THREE FOR SPECIAL KEYS
-        - browser
+        - browser # Controls the browser
                 - back()
                 - forward()
                 - refresh()
