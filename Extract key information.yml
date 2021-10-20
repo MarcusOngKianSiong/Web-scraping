@@ -1,6 +1,6 @@
 1. Extract and organize the key information I am going to use
 
-Key note when extracting data from the web:
+SECTION 1: Key note when extracting data from the web:
     - What you will be doing
         - You will be looking to extract data that are enclosed in tags: <a href='....'>DATA</a>
         - Identifying the data require you to identify the tags or an identifier attribute that uniquely identify elements in a page
@@ -18,17 +18,17 @@ Key note when extracting data from the web:
 
 
 
-Key libraries:
+SECTION 2: Key libraries
     - webbrowser    -> Opens browsers to a specific page
         - open([Website link])      # Open up a website on a browser
-        - 
+
     - requests      -> Download files and web pages from the internet
         - get([url])                                                # Takes a FULL url, download it, and return a response object. From the response object, you can do a few things:
             - status_code                                           # If the request is successful
             - raise_for_status()                                    # Raise an exception if the request was unsuccessful
             - text                                                  # Return the html code of a webpage in the form of a string
             - iter_content([number of bytes for each chunk])        # Use to iterate over the contents of a response, also used to chunk the data rather than loading all into memory at once to prevent the computer from running out of memory.
-            - 
+
 
     - bs4           -> Extracting information from a HTML page by parsing it
             - beautifulsoup([text to analyze], 'html.parser')       # Returns an object that allows you to manipulate the various types of items in the html
@@ -40,8 +40,11 @@ Key libraries:
 
     - selenium      -> Launches and controls a web browser (fill in forms and simulates mouse clicks)
         - LOOK AT SECTION 3 ON HOW TO IMPORT THIS LIBRARY
+        - CHECK SECTION 3 FOR SPECIAL KEYS
+        - CHECK SECTION 3 FOR PRINCIPLES
         - webdriver.Firefox()           # returns an object of type webdriver and open the browser firefox, OTHER REQUIREMENTS NEEDS TO BE FULFILLED TO USE THIS CHECK SECTION 3
             - get([website link])       # Go to a specific website on the browser
+
             
             - find_element_*            # Returns the first encountered element as a webelement object
                 - find_element_by_class_name()
@@ -51,6 +54,7 @@ Key libraries:
                 - find_element_by_partial_link_test()
                 - find_element_by_name()
                 - find_element_by_tag_name()
+                - find_element_by_xpath()               # GIVES YOU THE ABILITY SPECIFY THE SPECIFIC ELEMENT YOU ARE LOOKING FOR THROUGH AN EXPRESSION. LOOK AT SECTION 3 ON THE CONSTRUCTION OF THE EXPRESSION AND HOW TO USE IT
             - find_elements_*           # Returns a list webelement_* object where each item represents every matching element on the page
                 - find_elements_by_class_name()
                 - find_elements_by_css_selector()
@@ -59,7 +63,7 @@ Key libraries:
                 - find_elements_by_partial_link_test()
                 - find_elements_by_name()
                 - find_elements_by_tag_name()
-            
+                - find_elements_by_xpath()              # GIVES YOU THE ABILITY SPECIFY THE SPECIFIC ELEMENT YOU ARE LOOKING FOR THROUGH AN EXPRESSION. LOOK AT SECTION 3 ON THE CONSTRUCTION OF THE EXPRESSION AND HOW TO USE IT
                     - Webelement objects    # WHAT YOU CAN DO WITH THE RETURN VALUE OF FIND_ELEMENT/S
                         - tag_name
                         - get_attribute()
@@ -73,7 +77,7 @@ Key libraries:
                         - send_keys()
                         - submit()
 
-        - CHECK SECTION THREE FOR SPECIAL KEYS
+
         - browser # Controls the browser
                 - back()
                 - forward()
@@ -91,9 +95,9 @@ Key libraries:
 
     - pyperclip     -> copy and paste clipboard Functions
         - paste()       # return content from the clipboard
-        - 
 
-Key technical facts, considerations, or operations that will be useful:
+
+SECTION 3: Key technical facts, considerations, or operations that will be useful:
     - with open('[file location]','[type of operation e.g. wb, a, ab]') as variable_name_to_access_file:       # Open a file and edits can be made within, at the end of the operation, the file closes automatically.
         .......
         - Operation types:
@@ -141,3 +145,65 @@ Key technical facts, considerations, or operations that will be useful:
                     - DELETE
                     - F1 to F12
                     - TAB
+
+    - XPath: A more dynamic way of locating specific elements using the relationship the specific element has to its surrounding elements
+        - Principles:
+            - The result of using axes as a standalone will depend on the path used.
+                - Absolute path: Return all elements in the webpage that matches the criteria specified no matter if it is a webdriver object OR web element object OR the element held by a web element object
+                - Relative path: Returns nothing
+            - For consistent result, use it in a chain:         //*[@id="something"]/child::div         # Looks for div elements or the first div element (depending on the method used [returns a list or find a single element])
+            - [] represents a condition being imposed on a node.
+                - Types of nodes: element, attribute, text, namespace, processing, instruction.
+                
+        - Initialize it: from selenium.webdriver.common.by import By
+        - Where to use it: 
+            - In find_element/elements methods as an argument                     # Look at section 2 under webdriver.firefox()
+            - use within find_element_using_xpath()
+                - .find_element_using_xpath("//input[@name='Google Search']")
+        - Construction of XPath expression:
+            - Basic format: //tagname[@attribute name = 'attribute value']
+                1. //               -> Absolute or relative path
+                    - Absolute: Start from the root element, then proceed to specify the child root and then the child of the child of the root and etc
+                        - Usually, the top level element is html
+                        - Starts with a single slash: '/'
+                        - Example of absolute: /html/body/div/section/div/form/input[...]
+                    - Relative: Start from anywhere within the html
+                        - Starts with a double slash: '//'
+                        - Example of relative: //input[....]
+                2. tagname          -> Name of the tag to look for
+                    - specific tag name:  a, input, div, etc
+                    - Select any tag: *
+                3. Attribute            # Contents within the square bracket
+                    - Characteristics:
+                        - You can specify multiple attributes                       -> //*[@name='something'][@type="input"]
+                        - You can specify conditions (OR & AND)                     -> //*[@name='something' or/and type='something']
+                        - You can specify functions                                 -> //*[contain(@name,something)]
+                            - contain(@[attribute name],[attribute value])          -> Specify only a part of an attribute value and locate elements that have attribute whose value contain the specified text
+                            - starts-with(@[attribute name],[attribute value])      -> Similar to contains, but the text must be found in the front part of the attribute value
+                        - You can call upon the text between the tags               -> //*[text()='something']
+                            - text()
+                            - Can be used directly within the square brackets
+                            - can be used within the functions as the first argument or the place where attribute name is suppose to be
+                        - You can identify the a specific element using index if the element has the same sibling elements
+                            - //div[@value='something']/div[2]                        -> Identify the second div element within the parent div
+
+                    - attribute name   -> Look for a tag with this attribute name
+                    - Attribute value  -> Look for a tag with a specific attribute value as the attribute name
+                        
+            - XPath Axes format:
+                - Principles:
+                    - The element aspect must be stand alone and conditions ([]) placed on the element that as an axe will be ignored
+                - //[XPath Axe]::[element]
+                - What is it?:       -> A way to identifying elements using its relationship with other elements
+                - What are the types of XPath Axes?:
+                    NAME OF XPATH AXE(assuming find_element is used and not find_elements)           # DESCRIPTION                                   # EXAMPLE
+                    - following                                                                      # Find the neighbor element of the previously specified element in the chain
+                    - following-sibling                                                              # Same as following, but limiting the scope to only its siblings
+                    - preceding                                                                      # Find the precending element starting from the top of the html document and not from the element before the previously specified element.
+                    - preceding-sibling                                                              # Same as preceding, but limiting the scope to only its siblings
+                    - child                                                                          # Return the child of the previously specified element in the chain
+                    - Parent                                                                         # Return the parent of the previously specified element in the chain
+                    - Descendant                                                                     # Return the descendent of the previously specified element
+                    - Ancestor                                                                       # Return an element that is the ancestor of the previously specified element. It can be a parent or grandparent or anything beyond that.
+
+    - Can selenium web element objects use webdriver methods? -> YES
