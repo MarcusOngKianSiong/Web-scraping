@@ -31,7 +31,7 @@ SECTION 2: Key libraries
 
 
     - bs4           -> Extracting information from a HTML page by parsing it
-            - beautifulsoup([text to analyze], 'html.parser')       # Returns an object that allows you to manipulate the various types of items in the html
+            - BeautifulSoup([text to analyze], 'html.parser')       # Returns an object that allows you to manipulate the various types of items in the html
                 - select([CSS selector])                            # Returns a list of all the elements (IN THE FORM OF A TAG OBJECT) that contain the specifications given in the argument
                     - [0]                                           # Return the entire html tag: <p id='something'>isudahasgbarg</p>
                     - [0].getText()                                 # Return the contents found between opening and closing tags
@@ -45,7 +45,7 @@ SECTION 2: Key libraries
         - webdriver.Firefox()           # returns an object of type webdriver and open the browser firefox, OTHER REQUIREMENTS NEEDS TO BE FULFILLED TO USE THIS CHECK SECTION 3
             - get([website link])       # Go to a specific website on the browser
 
-            
+
             - find_element_*            # Returns the first encountered element as a webelement object
                 - find_element_by_class_name()
                 - find_element_by_css_selector()
@@ -207,3 +207,15 @@ SECTION 3: Key technical facts, considerations, or operations that will be usefu
                     - Ancestor                                                                       # Return an element that is the ancestor of the previously specified element. It can be a parent or grandparent or anything beyond that.
 
     - Can selenium web element objects use webdriver methods? -> YES
+
+    - URL components:
+            - Scheme    -> Protocol used to get information from the web                -> https://
+            - Host      -> Server that holds the data                                   -> google.com
+            - Path      -> location of the document within the server                   -> /xyz/x/something.html
+            - Query     -> String of information that the specific document can use     -> ?q=1&w=2
+
+
+SECTION 4: Common errors
+                    - Case sensitive
+                    - syntax error
+                    - Failure to know what object type am I working with
